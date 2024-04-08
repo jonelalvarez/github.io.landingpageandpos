@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Basic -->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- Mobile Metas -->
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <!-- Site Metas -->
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+
+        <title>MULTIMEDIA DEVELOPMENT MIDTERM EXAM</title>
+
+        <!-- bootstrap core css -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+        <!-- fonts style -->
+        <link
+            href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- font awesome style -->
+        <link href="css/font-awesome.min.css" rel="stylesheet" />
+        <!-- nice select -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css"
+            integrity="sha256-mLBIhmBvigTFWPSCtvdu6a76T+3Xyt+K571hupeFLg4="
+            crossorigin="anonymous"
+        />
+        <!-- slidck slider -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+            integrity="sha256-UK1EiopXIL+KVhfbFa8xrmAWPeBjMVdvYMYkTAEv/HI="
+            crossorigin="anonymous"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css.map"
+            integrity="undefined"
+            crossorigin="anonymous"
+        />
+
+        <!-- Custom styles for this template -->
+        <link href="css/style.css" rel="stylesheet" />
+        <!-- responsive style -->
+        <link href="css/responsive.css" rel="stylesheet" />
+    </head>
+
+    <body class="sub_page">
+        <div class="hero_area">
+            <!-- header section strats -->
+            <header class="header_section">
+                <div class="container-fluid">
+                    <nav class="navbar navbar-expand-lg custom_nav-container">
+                        <a class="navbar-brand" href="index.html">
+                            <span> JJ Pizzeria </span>
+                        </a>
+                        <div class="" id="">
+                            <!-- <div class="User_option">
+                                <a href="">
+                                    <i
+                                        class="fa fa-user"
+                                        aria-hidden="true"
+                                    ></i>
+                                    <span>Login</span>
+                                </a>
+                                <form class="form-inline">
+                                    <input type="search" placeholder="Search" />
+                                    <button
+                                        class="btn nav_search-btn"
+                                        type="submit"
+                                    >
+                                        <i
+                                            class="fa fa-search"
+                                            aria-hidden="true"
+                                        ></i>
+                                    </button>
+                                </form>
+                            </div> -->
+                            <div class="custom_menu-btn">
+                                <button onclick="openNav()">
+                                    <img src="images/menu.png" alt="" />
+                                </button>
+                            </div>
+                            <div id="myNav" class="overlay">
+                                <div class="overlay-content">
+                                    <a href="index.html">Home</a>
+                                    <a href="about.html">About</a>
+                                    <a href="blog.html">Blog</a>
+                                    <a href="testimonial.html">Testimonial</a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+            <!-- end header section -->
+        </div>
+
+        <!-- news section -->
+        <section class="news_section layout_padding">
+            <div class="container">
+                <div class="heading_container heading_center">
+                    <h2>Choose what to order</h2>
+                </div>
+                <div class="justify-content-between">
+                    <div class="pt-3 pb-5 row justify-content-center">
+                        <!-- item 1 -->
+                        <div class="col-md-3 pt-3" id="item1">
+                            <a>
+                                <div class="card card-body p-0">
+                                    <div class="img-box">
+                                        <img
+                                            src="images/pizza-1-removebg-preview.png"
+                                            class="box-imgorder p-4"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="text-center pt-3" >
+                                        <h4 style="font-family: 'Poppins', sans-serif; font-weight: bolder">Italian Pizza</h4>
+                                        <p id="item1Price" style="font-family: 'Poppins', sans-serif; font-weight: bold; color: #fac564;"></p>
+                                    </div>
+                                    <div class="qtyRemovePlaceHolder d-none">
+                                        <div
+                                            class="quantity row text-center justify-content-center pb-1"
+                                        >
+                                            <div
+                                                class="col-md-5 p-0 d-flex align-items-center justify-content-center"
+                                            >
+                                                <h5
+                                                    class="m-0"
+                                                    style="font-size: 14px"
+                                                >
+                                                    Quantity:
+                                                </h5>
+                                            </div>
+
+                                            <div class="col-md-2 p-0">
+                                                <span
+                                                    class="p-2 badge badge-primary"
+                                                    style="font-size: 14px"
+                                                    >1</span
+                                                >
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="remove card card-header text-center p-0"
+                                        >
+                                            <button
+                                                class="btn btn-danger btn-sm remove-btn"
+                                            >
+                                                Remove
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- item 2 -->
+                        <div class="col-md-3 pt-3" id="item2">
+                            <a>
+                                <div class="card card-body p-0">
+                                    <div class="img-box">
+                                        <img
+                                            src="images/pizza-2-removebg-preview.png"
+                                            class="box-imgorder p-4"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="text-center pt-3">
+                                        <h4 style="font-family: 'Poppins', sans-serif; font-weight: bolder">Hawaiian Pizza</h4>
+                                        <p id="item2Price" style="font-family: 'Poppins', sans-serif; font-weight: bold; color: #fac564;"></p>
+                                    </div>
+                                    <div class="qtyRemovePlaceHolder d-none">
+                                        <div
+                                            class="quantity row text-center justify-content-center pb-1"
+                                        >
+                                            <div
+                                                class="col-md-5 p-0 d-flex align-items-center justify-content-center"
+                                            >
+                                                <h5
+                                                    class="m-0"
+                                                    style="font-size: 14px"
+                                                >
+                                                    Quantity:
+                                                </h5>
+                                            </div>
+
+                                            <div class="col-md-2 p-0">
+                                                <span
+                                                    class="p-2 badge badge-primary"
+                                                    style="font-size: 14px"
+                                                    >1</span
+                                                >
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="remove card card-header text-center p-0"
+                                        >
+                                            <button
+                                                class="btn btn-danger btn-sm remove-btn"
+                                            >
+                                                Remove
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- item 3 -->
+                        <div class="col-md-3 pt-3" id="item3">
+                            <a>
+                                <div class="card card-body p-0">
+                                    <div class="img-box">
+                                        <img
+                                            src="images/pizza-4-removebg-preview.png"
+                                            class="box-imgorder p-4"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="text-center pt-3">
+                                        <h4 style="font-family: 'Poppins', sans-serif; font-weight: bolder">Bacon Crispy Thins</h4>
+                                        <p id="item3Price" style="font-family: 'Poppins', sans-serif; font-weight: bold; color: #fac564;"></p>
+                                    </div>
+                                    <div class="qtyRemovePlaceHolder d-none">
+                                        <div
+                                            class="quantity row text-center justify-content-center pb-1"
+                                        >
+                                            <div
+                                                class="col-md-5 p-0 d-flex align-items-center justify-content-center"
+                                            >
+                                                <h5
+                                                    class="m-0"
+                                                    style="font-size: 14px"
+                                                >
+                                                    Quantity:
+                                                </h5>
+                                            </div>
+
+                                            <div class="col-md-2 p-0">
+                                                <span
+                                                    class="p-2 badge badge-primary"
+                                                    style="font-size: 14px"
+                                                    >1</span
+                                                >
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="remove card card-header text-center p-0"
+                                        >
+                                            <button
+                                                class="btn btn-danger btn-sm remove-btn"
+                                            >
+                                                Remove
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- item 4 -->
+                        <div class="col-md-3 pt-3" id="item4">
+                            <a>
+                                <div class="card card-body p-0">
+                                    <div class="img-box">
+                                        <img
+                                            src="images/pizza-5-removebg-preview.png"
+                                            class="box-imgorder p-4"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="text-center pt-3">
+                                        <h4 style="font-family: 'Poppins', sans-serif; font-weight: bolder">Hawaiian Special</h4>
+                                        <p id="item4Price" style="font-family: 'Poppins', sans-serif; font-weight: bold; color: #fac564;"></p>
+                                    </div>
+                                    <div class="qtyRemovePlaceHolder d-none">
+                                        <div
+                                            class="quantity row text-center justify-content-center pb-1"
+                                        >
+                                            <div
+                                                class="col-md-5 p-0 d-flex align-items-center justify-content-center"
+                                            >
+                                                <h5
+                                                    class="m-0"
+                                                    style="font-size: 14px"
+                                                >
+                                                    Quantity:
+                                                </h5>
+                                            </div>
+
+                                            <div class="col-md-2 p-0">
+                                                <span
+                                                    class="p-2 badge badge-primary"
+                                                    style="font-size: 14px"
+                                                    >1</span
+                                                >
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="remove card card-header text-center p-0"
+                                        >
+                                            <button
+                                                class="btn btn-danger btn-sm remove-btn"
+                                            >
+                                                Remove
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- item 5 -->
+                        <div class="col-md-3 pt-3" id="item5">
+                            <a>
+                                <div class="card card-body p-0">
+                                    <div class="img-box5">
+                                        <img
+                                            src="images/pizza-6-removebg-preview.png"
+                                            class="box-imgorder"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="text-center pt-3">
+                                        <h4 style="font-family: 'Poppins', sans-serif; font-weight: bolder">Ultimate Overload</h4>
+                                        <p id="item5Price" style="font-family: 'Poppins', sans-serif; font-weight: bold; color: #fac564;"></p>
+                                    </div>
+                                    <div class="qtyRemovePlaceHolder d-none">
+                                        <div
+                                            class="quantity row text-center justify-content-center pb-1"
+                                        >
+                                            <div
+                                                class="col-md-5 p-0 d-flex align-items-center justify-content-center"
+                                            >
+                                                <h5
+                                                    class="m-0"
+                                                    style="font-size: 14px"
+                                                >
+                                                    Quantity:
+                                                </h5>
+                                            </div>
+
+                                            <div class="col-md-2 p-0">
+                                                <span
+                                                    class="p-2 badge badge-primary"
+                                                    style="font-size: 14px"
+                                                    >1</span
+                                                >
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="remove card card-header text-center p-0"
+                                        >
+                                            <button
+                                                class="btn btn-danger btn-sm remove-btn"
+                                            >
+                                                Remove
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- item 6 -->
+                        <div class="col-md-3 pt-3" id="item6">
+                            <a>
+                                <div class="card card-body p-0">
+                                    <div class="img-box">
+                                        <img
+                                            src="images/pizza-7-removebg-preview.png"
+                                            class="box-imgorder"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="text-center pt-3">
+                                        <h4 style="font-family: 'Poppins', sans-serif; font-weight: bolder">Bacon Pizza</h4>
+                                        <p id="item6Price" style="font-family: 'Poppins', sans-serif; font-weight: bold; color: #fac564;"></p>
+                                    </div>
+                                    <div class="qtyRemovePlaceHolder d-none">
+                                        <div
+                                            class="quantity row text-center justify-content-center pb-1"
+                                        >
+                                            <div
+                                                class="col-md-5 p-0 d-flex align-items-center justify-content-center"
+                                            >
+                                                <h5
+                                                    class="m-0"
+                                                    style="font-size: 14px"
+                                                >
+                                                    Quantity:
+                                                </h5>
+                                            </div>
+
+                                            <div class="col-md-2 p-0">
+                                                <span
+                                                    class="p-2 badge badge-primary"
+                                                    style="font-size: 14px"
+                                                    >1</span
+                                                >
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="remove card card-header text-center p-0"
+                                        >
+                                            <button
+                                                class="btn btn-danger btn-sm remove-btn"
+                                            >
+                                                Remove
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- item 7 -->
+                        <div class="col-md-3 pt-3" id="item7">
+                            <a>
+                                <div class="card card-body p-0 pt-2">
+                                    <div class="img-box">
+                                        <img
+                                            src="images/pizza-8-removebg-preview.png"
+                                            class="box-imgorder"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="text-center pt-3">
+                                        <h4 style="font-family: 'Poppins', sans-serif; font-weight: bolder">Ham & Pineapple</h4>
+                                        <p id="item7Price" style="font-family: 'Poppins', sans-serif; font-weight: bold; color: #fac564;"></p>
+                                    </div>
+                                    <div class="qtyRemovePlaceHolder d-none">
+                                        <div
+                                            class="quantity row text-center justify-content-center pb-1"
+                                        >
+                                            <div
+                                                class="col-md-5 p-0 d-flex align-items-center justify-content-center"
+                                            >
+                                                <h5
+                                                    class="m-0"
+                                                    style="font-size: 14px"
+                                                >
+                                                    Quantity:
+                                                </h5>
+                                            </div>
+
+                                            <div class="col-md-2 p-0">
+                                                <span
+                                                    class="p-2 badge badge-primary"
+                                                    style="font-size: 14px"
+                                                    >1</span
+                                                >
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="remove card card-header text-center p-0"
+                                        >
+                                            <button
+                                                class="btn btn-danger btn-sm remove-btn"
+                                            >
+                                                Remove
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- item 8 -->
+                        <div class="col-md-3 pt-3" id="item8">
+                            <a>
+                                <div class="card card-body p-0">
+                                    <div class="img-box8">
+                                        <img
+                                            src="images/pizza-3-removebg-preview.png"
+                                            class="box-imgorder"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="text-center pt-3">
+                                        <h4 style="font-family: 'Poppins', sans-serif; font-weight: bolder">Greek Pizza</h4>
+                                        <p id="item8Price" style="font-family: 'Poppins', sans-serif; font-weight: bold; color: #fac564;
+                                        ;"></p>
+                                    </div>
+                                    <div class="qtyRemovePlaceHolder d-none">
+                                        <div
+                                            class="quantity row text-center justify-content-center pb-1"
+                                        >
+                                            <div
+                                                class="col-md-5 p-0 d-flex align-items-center justify-content-center"
+                                            >
+                                                <h5
+                                                    class="m-0"
+                                                    style="font-size: 14px;"
+                                                >
+                                                    Quantity:
+                                                </h5>
+                                            </div>
+
+                                            <div class="col-md-2 p-0">
+                                                <span
+                                                    class="p-2 badge badge-primary"
+                                                    style="font-size: 14px"
+                                                    >1</span
+                                                >
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="remove card card-header text-center p-0"
+                                        >
+                                            <button
+                                                class="btn btn-danger btn-sm remove-btn"
+                                            >
+                                                Remove
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order list div -->
+                <div class="card card-body">
+                    <h3 class="m-0" style="font-family: 'Poppins', sans-serif; font-weight: bolder;">Orders:</h3>
+                    <div class="pt-1 p-0 container">
+                        <div class="row appendOrder"></div>
+                        <div class="card card-body">
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <h3 id="subTotal" style="font-family: 'Poppins', sans-serif; font-weight: bold;"></h3>
+                                </div>
+                                <div class="col-lg-6">
+                                    <input
+                                        type="number"
+                                        class="form-control payHere"
+                                        placeholder="Pay here"
+                                    />
+                                </div>
+                                <div
+                                    class="col-lg-2 text-center d-flex align-items-center "
+                                >
+                                    <button
+                                        class="payBtn px-5 btn btn-success btn-sm"
+                                    >
+                                        Pay!
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- <div class="quantity row text-center pb-1">
+          <div class="col-md-7 p-0">
+              <h5 style="font-size: 20px">
+                  Qty:
+              </h5>
+          </div>
+          <div class="col-md-5 p-0">
+              <span
+                  class="p-2 badge badge-primary"
+                  style="font-size: 14px"
+                  >5</span
+              >
+          </div>
+      </div>
+      <div class="remove text-center py-3">
+          <div class="col-md-12 p-0">
+              <button
+                  class="btn btn-danger btn-sm remove-btn"
+              >
+                  Remove
+              </button>
+          </div>
+      </div> -->
+
+        <!-- <div class="justify-content-between">
+            <div class="row justify-content-center">
+                <div class="col-md-3">
+                    <div class="box">
+                        <div class="img-box">
+                            <img src="images/n1.jpg" class="box-img" alt="" />
+                        </div>
+                        <div class="detail-box pt-3">
+                            <h4>Gulay</h4>
+                            <p>₱100.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- end news section -->
+
+        <div class="footer_container">
+            <!-- info section -->
+            <section class="info_section p-1">
+                <div class="container">
+                    <div class="contact_box">
+                        <a href="">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    <div class="info_links">
+                        <ul>
+                            <li class="active">
+                                <a href="index.html"> Home </a>
+                            </li>
+                            <li>
+                                <a class="" href="blog.html"> Order Here </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="social_box">
+                        <a href="">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <!-- end info_section -->
+
+            <!-- footer section -->
+            <footer class="footer_section">
+                <div class="container">
+                    <p>
+                        &copy; <span id="displayYear"></span> All Rights
+                        Reserved By
+                        <a href="https://html.design/">Free Html Templates</a
+                        ><br />
+                        Distributed By:
+                        <a href="https://themewagon.com/">ThemeWagon</a>
+                    </p>
+                </div>
+            </footer>
+            <!-- footer section -->
+        </div>
+        <!-- jQery -->
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <!-- bootstrap js -->
+        <script src="js/bootstrap.js"></script>
+        <!-- slick  slider -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
+        <!-- nice select -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"
+            integrity="sha256-Zr3vByTlMGQhvMfgkQ5BtWRSKBGa2QlspKYJnkjZTmo="
+            crossorigin="anonymous"
+        ></script>
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- sweetalert2 -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <!-- custom js -->
+        <script src="js/custom.js"></script>
+        <script>
+            $(document).ready(function () {
+                let item1Price = 260;
+                let item2Price = 250;
+                let item3Price = 280;
+                let item4Price = 270;
+                let item5Price = 290;
+                let item6Price = 240;
+                let item7Price = 220;
+                let item8Price = 250;
+
+                $('#item1Price').text('₱ ' + item1Price);
+                $('#item2Price').text('₱ ' + item2Price);
+                $('#item3Price').text('₱ ' + item3Price);
+                $('#item4Price').text('₱ ' + item4Price);
+                $('#item5Price').text('₱ ' + item5Price);
+                $('#item6Price').text('₱ ' + item6Price);
+                $('#item7Price').text('₱ ' + item7Price);
+                $('#item8Price').text('₱ ' + item8Price);
+
+                var clickCounts = {};
+                var items = {};
+
+                $(
+                    '#item1, #item2, #item3, #item4, #item5, #item6, #item7, #item8'
+                )
+                    .click(function () {
+                        var selectedItem = $(this).attr('id');
+
+                        if (!items[selectedItem]) {
+                            var clonedItem = $(this)
+                                .clone()
+                                .addClass('col mb-2');
+
+                            clonedItem
+                                .find('.qtyRemovePlaceHolder')
+                                .removeClass('d-none');
+
+                            $('.appendOrder').append(clonedItem);
+
+                            items[selectedItem] = {
+                                clonedItem: clonedItem,
+                                quantity: 1,
+                                price: eval(
+                                    'item' + selectedItem.substring(4) + 'Price'
+                                ),
+                            };
+                        } else {
+                            items[selectedItem].quantity++;
+                            items[selectedItem].clonedItem
+                                .find('.badge')
+                                .text(items[selectedItem].quantity);
+                        }
+
+                        var total = 0;
+                        for (var item in items) {
+                            total += items[item].quantity * items[item].price;
+                        }
+                        $('#subTotal').text('Total: ₱' + total);
+                    })
+                    .css('cursor', 'pointer');
+
+                $('.payBtn').click(function () {
+                    var payAmount = parseInt($('.payHere').val());
+                    var total = parseFloat(
+                        $('#subTotal').text().replace('Total: ₱', '')
+                    );
+
+                    if (payAmount >= total) {
+                        var change = payAmount - total;
+                        Swal.fire({
+                            title: 'Orders paid!',
+                            text:
+                                'Thank you for purchasing! Your change is ₱' +
+                                change.toFixed(2),
+                            icon: 'success',
+                        }).then((result) => {
+                            $('.appendOrder').empty();
+                            $('#subTotal').text('Total: ₱0.00');
+                            items = {};
+                            if (result.isConfirmed) {
+                                window.location.reload();
+                            }
+
+                        });
+                    } else {
+                        Swal.fire({
+                            title: 'Insufficient payment!',
+                            text: 'Please enter a valid amount.',
+                            icon: 'error',
+                        });
+                    }
+                });
+               
+            });
+
+            
+        </script>
+    </body>
+</html>
