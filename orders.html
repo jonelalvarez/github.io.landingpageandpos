@@ -717,7 +717,9 @@
                         total += items[item].quantity * items[item].price;
                     }
                     $('#subTotal').text('Total: ₱' + total);
-                });
+                }).css('cursor', 'pointer').hover(function() {
+    $(this).css('cursor', 'pointer');
+});
 
                 $('.payBtn').click(function () {
                     var payAmount = parseInt($('.payHere').val());
