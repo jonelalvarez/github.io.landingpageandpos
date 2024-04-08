@@ -154,11 +154,7 @@
                                         <div
                                             class="remove card card-header text-center p-0"
                                         >
-                                            <button
-                                                class="btn btn-danger btn-sm remove-btn"
-                                            >
-                                                Remove
-                                            </button>
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -205,11 +201,7 @@
                                         <div
                                             class="remove card card-header text-center p-0"
                                         >
-                                            <button
-                                                class="btn btn-danger btn-sm remove-btn"
-                                            >
-                                                Remove
-                                            </button>
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -256,11 +248,7 @@
                                         <div
                                             class="remove card card-header text-center p-0"
                                         >
-                                            <button
-                                                class="btn btn-danger btn-sm remove-btn"
-                                            >
-                                                Remove
-                                            </button>
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -307,11 +295,7 @@
                                         <div
                                             class="remove card card-header text-center p-0"
                                         >
-                                            <button
-                                                class="btn btn-danger btn-sm remove-btn"
-                                            >
-                                                Remove
-                                            </button>
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -358,11 +342,7 @@
                                         <div
                                             class="remove card card-header text-center p-0"
                                         >
-                                            <button
-                                                class="btn btn-danger btn-sm remove-btn"
-                                            >
-                                                Remove
-                                            </button>
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -409,11 +389,7 @@
                                         <div
                                             class="remove card card-header text-center p-0"
                                         >
-                                            <button
-                                                class="btn btn-danger btn-sm remove-btn"
-                                            >
-                                                Remove
-                                            </button>
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -460,11 +436,7 @@
                                         <div
                                             class="remove card card-header text-center p-0"
                                         >
-                                            <button
-                                                class="btn btn-danger btn-sm remove-btn"
-                                            >
-                                                Remove
-                                            </button>
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -512,11 +484,7 @@
                                         <div
                                             class="remove card card-header text-center p-0"
                                         >
-                                            <button
-                                                class="btn btn-danger btn-sm remove-btn"
-                                            >
-                                                Remove
-                                            </button>
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -696,44 +664,60 @@
                 var clickCounts = {};
                 var items = {};
 
+                // Click event for adding items
                 $(
                     '#item1, #item2, #item3, #item4, #item5, #item6, #item7, #item8'
-                )
-                    .click(function () {
-                        var selectedItem = $(this).attr('id');
+                ).click(function () {
+                    var selectedItem = $(this).attr('id');
 
-                        if (!items[selectedItem]) {
-                            var clonedItem = $(this)
-                                .clone()
-                                .addClass('col mb-2');
+                    if (!items[selectedItem]) {
+                        var clonedItem = $(this).clone().addClass('col mb-2');
 
-                            clonedItem
-                                .find('.qtyRemovePlaceHolder')
-                                .removeClass('d-none');
+                        clonedItem
+                            .find('.qtyRemovePlaceHolder')
+                            .removeClass('d-none');
 
-                            $('.appendOrder').append(clonedItem);
+                        // Add remove button
+                        var removeButton = $('<button>')
+                            .addClass('btn btn-danger btn-sm remove-btn')
+                            .text('Remove');
+                        removeButton.click(function () {
+                            // Remove item from the order list
+                            $(this).closest('.col.mb-2').remove();
+                            delete items[selectedItem];
 
-                            items[selectedItem] = {
-                                clonedItem: clonedItem,
-                                quantity: 1,
-                                price: eval(
-                                    'item' + selectedItem.substring(4) + 'Price'
-                                ),
-                            };
-                        } else {
-                            items[selectedItem].quantity++;
-                            items[selectedItem].clonedItem
-                                .find('.badge')
-                                .text(items[selectedItem].quantity);
-                        }
+                            // Recalculate total
+                            var total = 0;
+                            for (var item in items) {
+                                total +=
+                                    items[item].quantity * items[item].price;
+                            }
+                            $('#subTotal').text('Total: ₱' + total);
+                        });
+                        clonedItem.find('.remove').append(removeButton);
 
-                        var total = 0;
-                        for (var item in items) {
-                            total += items[item].quantity * items[item].price;
-                        }
-                        $('#subTotal').text('Total: ₱' + total);
-                    })
-                    .css('cursor', 'pointer');
+                        $('.appendOrder').append(clonedItem);
+
+                        items[selectedItem] = {
+                            clonedItem: clonedItem,
+                            quantity: 1,
+                            price: eval(
+                                'item' + selectedItem.substring(4) + 'Price'
+                            ),
+                        };
+                    } else {
+                        items[selectedItem].quantity++;
+                        items[selectedItem].clonedItem
+                            .find('.badge')
+                            .text(items[selectedItem].quantity);
+                    }
+
+                    var total = 0;
+                    for (var item in items) {
+                        total += items[item].quantity * items[item].price;
+                    }
+                    $('#subTotal').text('Total: ₱' + total);
+                });
 
                 $('.payBtn').click(function () {
                     var payAmount = parseInt($('.payHere').val());
@@ -756,7 +740,6 @@
                             if (result.isConfirmed) {
                                 window.location.reload();
                             }
-
                         });
                     } else {
                         Swal.fire({
@@ -766,7 +749,6 @@
                         });
                     }
                 });
-               
             });
 
             
